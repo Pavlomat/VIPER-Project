@@ -7,19 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA7AD8FC2894207300ED8A2F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD8FA2894207300ED8A2F /* CollectionViewCell.swift */; };
+		BA7AD8FD2894207300ED8A2F /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AD8FB2894207300ED8A2F /* CollectionViewCell.xib */; };
+		BA7AD8FF2894209300ED8A2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD8FE2894209300ED8A2F /* MainViewController.swift */; };
+		BA7AD901289420A500ED8A2F /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD900289420A500ED8A2F /* MainPresenter.swift */; };
+		BA7AD903289420AE00ED8A2F /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD902289420AE00ED8A2F /* MainInteractor.swift */; };
+		BA7AD905289420B800ED8A2F /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD904289420B800ED8A2F /* MainConfigurator.swift */; };
+		BA7AD907289420BF00ED8A2F /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD906289420BF00ED8A2F /* MainRouter.swift */; };
+		BA7AD909289420D200ED8A2F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD908289420D200ED8A2F /* AboutViewController.swift */; };
+		BA7AD90B289420E300ED8A2F /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD90A289420E300ED8A2F /* AboutPresenter.swift */; };
+		BA7AD90D289420EB00ED8A2F /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD90C289420EB00ED8A2F /* AboutInteractor.swift */; };
+		BA7AD90F289420F200ED8A2F /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD90E289420F200ED8A2F /* AboutConfigurator.swift */; };
+		BA7AD911289420FB00ED8A2F /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD910289420FB00ED8A2F /* AboutRouter.swift */; };
+		BA7AD914289437E000ED8A2F /* MyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7AD913289437E000ED8A2F /* MyTimer.swift */; };
 		BAA0372C28941F5C0084A1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0372B28941F5C0084A1C0 /* AppDelegate.swift */; };
 		BAA0372E28941F5C0084A1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0372D28941F5C0084A1C0 /* SceneDelegate.swift */; };
-		BAA0373028941F5C0084A1C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0372F28941F5C0084A1C0 /* ViewController.swift */; };
 		BAA0373328941F5C0084A1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373128941F5C0084A1C0 /* Main.storyboard */; };
 		BAA0373528941F5D0084A1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373428941F5D0084A1C0 /* Assets.xcassets */; };
 		BAA0373828941F5D0084A1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373628941F5D0084A1C0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA7AD8FA2894207300ED8A2F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BA7AD8FB2894207300ED8A2F /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		BA7AD8FE2894209300ED8A2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BA7AD900289420A500ED8A2F /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		BA7AD902289420AE00ED8A2F /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		BA7AD904289420B800ED8A2F /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		BA7AD906289420BF00ED8A2F /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		BA7AD908289420D200ED8A2F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		BA7AD90A289420E300ED8A2F /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		BA7AD90C289420EB00ED8A2F /* AboutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		BA7AD90E289420F200ED8A2F /* AboutConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
+		BA7AD910289420FB00ED8A2F /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		BA7AD913289437E000ED8A2F /* MyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimer.swift; sourceTree = "<group>"; };
 		BAA0372828941F5C0084A1C0 /* VIPER Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA0372B28941F5C0084A1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAA0372D28941F5C0084A1C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAA0372F28941F5C0084A1C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAA0373228941F5C0084A1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAA0373428941F5D0084A1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAA0373728941F5D0084A1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA7AD912289437D100ED8A2F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AD913289437E000ED8A2F /* MyTimer.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		BAA0371F28941F5C0084A1C0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +88,67 @@
 		BAA0372A28941F5C0084A1C0 /* VIPER Project */ = {
 			isa = PBXGroup;
 			children = (
-				BAA0372B28941F5C0084A1C0 /* AppDelegate.swift */,
-				BAA0372D28941F5C0084A1C0 /* SceneDelegate.swift */,
-				BAA0372F28941F5C0084A1C0 /* ViewController.swift */,
-				BAA0373128941F5C0084A1C0 /* Main.storyboard */,
+				BA7AD912289437D100ED8A2F /* Entity */,
+				BAA0374328941FD20084A1C0 /* Storyboards */,
+				BAA0374128941FC00084A1C0 /* MainViewController */,
+				BAA0374028941FB60084A1C0 /* AboutViewController */,
+				BAA0373F28941FAB0084A1C0 /* Delegates */,
 				BAA0373428941F5D0084A1C0 /* Assets.xcassets */,
-				BAA0373628941F5D0084A1C0 /* LaunchScreen.storyboard */,
 				BAA0373928941F5D0084A1C0 /* Info.plist */,
 			);
 			path = "VIPER Project";
+			sourceTree = "<group>";
+		};
+		BAA0373F28941FAB0084A1C0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0372B28941F5C0084A1C0 /* AppDelegate.swift */,
+				BAA0372D28941F5C0084A1C0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		BAA0374028941FB60084A1C0 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AD908289420D200ED8A2F /* AboutViewController.swift */,
+				BA7AD90A289420E300ED8A2F /* AboutPresenter.swift */,
+				BA7AD90C289420EB00ED8A2F /* AboutInteractor.swift */,
+				BA7AD90E289420F200ED8A2F /* AboutConfigurator.swift */,
+				BA7AD910289420FB00ED8A2F /* AboutRouter.swift */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
+		BAA0374128941FC00084A1C0 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AD8FE2894209300ED8A2F /* MainViewController.swift */,
+				BA7AD900289420A500ED8A2F /* MainPresenter.swift */,
+				BA7AD902289420AE00ED8A2F /* MainInteractor.swift */,
+				BA7AD904289420B800ED8A2F /* MainConfigurator.swift */,
+				BA7AD906289420BF00ED8A2F /* MainRouter.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		BAA0374228941FCD0084A1C0 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AD8FB2894207300ED8A2F /* CollectionViewCell.xib */,
+				BA7AD8FA2894207300ED8A2F /* CollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		BAA0374328941FD20084A1C0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BAA0373128941F5C0084A1C0 /* Main.storyboard */,
+				BAA0373628941F5D0084A1C0 /* LaunchScreen.storyboard */,
+				BAA0374228941FCD0084A1C0 /* CollectionViewCell */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +211,7 @@
 			files = (
 				BAA0373828941F5D0084A1C0 /* LaunchScreen.storyboard in Resources */,
 				BAA0373528941F5D0084A1C0 /* Assets.xcassets in Resources */,
+				BA7AD8FD2894207300ED8A2F /* CollectionViewCell.xib in Resources */,
 				BAA0373328941F5C0084A1C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +223,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAA0373028941F5C0084A1C0 /* ViewController.swift in Sources */,
+				BA7AD90F289420F200ED8A2F /* AboutConfigurator.swift in Sources */,
+				BA7AD914289437E000ED8A2F /* MyTimer.swift in Sources */,
+				BA7AD90D289420EB00ED8A2F /* AboutInteractor.swift in Sources */,
+				BA7AD901289420A500ED8A2F /* MainPresenter.swift in Sources */,
+				BA7AD911289420FB00ED8A2F /* AboutRouter.swift in Sources */,
+				BA7AD907289420BF00ED8A2F /* MainRouter.swift in Sources */,
 				BAA0372C28941F5C0084A1C0 /* AppDelegate.swift in Sources */,
+				BA7AD909289420D200ED8A2F /* AboutViewController.swift in Sources */,
 				BAA0372E28941F5C0084A1C0 /* SceneDelegate.swift in Sources */,
+				BA7AD8FC2894207300ED8A2F /* CollectionViewCell.swift in Sources */,
+				BA7AD905289420B800ED8A2F /* MainConfigurator.swift in Sources */,
+				BA7AD8FF2894209300ED8A2F /* MainViewController.swift in Sources */,
+				BA7AD90B289420E300ED8A2F /* AboutPresenter.swift in Sources */,
+				BA7AD903289420AE00ED8A2F /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

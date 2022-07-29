@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y9f-W0-Mjc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="VIPER_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer creation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atM-ux-b9X">
+                                <rect key="frame" x="107" y="88" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ava-cF-FEp"/>
+                                    <constraint firstAttribute="height" constant="50" id="afy-TD-Gv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Set seconds" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3I-Ui-N2P">
+                                <rect key="frame" x="57" y="228" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="0.70128828639999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1Nd-xv-xPW"/>
+                                    <constraint firstAttribute="height" constant="50" id="5uh-Sa-HHX"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Timer name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7c-Dh-ehx">
+                                <rect key="frame" x="57" y="158" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="0.70128828642384111" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Vd-AU-upa"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZWb-zC-qkI"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="37z-FN-07J">
+                                <rect key="frame" x="0.0" y="376" width="414" height="486"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HcF-lN-INc">
+                                    <size key="itemSize" width="400" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWy-SY-FgP">
+                                <rect key="frame" x="57" y="298" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Cxp-WN-jj1"/>
+                                    <constraint firstAttribute="height" constant="50" id="vVI-4q-WMB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="adTimerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIU-f4-e17"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d3I-Ui-N2P" firstAttribute="top" secondItem="A7c-Dh-ehx" secondAttribute="bottom" constant="20" id="B66-Zc-nWT"/>
+                            <constraint firstItem="A7c-Dh-ehx" firstAttribute="top" secondItem="atM-ux-b9X" secondAttribute="bottom" constant="20" id="Lsb-9g-azt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="37z-FN-07J" secondAttribute="trailing" id="U0g-vX-tPK"/>
+                            <constraint firstItem="37z-FN-07J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WxI-sl-ZGJ"/>
+                            <constraint firstItem="atM-ux-b9X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ybs-fr-ilG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="37z-FN-07J" secondAttribute="bottom" id="bQk-eb-niW"/>
+                            <constraint firstItem="37z-FN-07J" firstAttribute="top" secondItem="ZWy-SY-FgP" secondAttribute="bottom" constant="28" id="dQP-hR-iFJ"/>
+                            <constraint firstItem="ZWy-SY-FgP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eCB-c5-8jy"/>
+                            <constraint firstItem="37z-FN-07J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jTj-OK-l1Y"/>
+                            <constraint firstItem="A7c-Dh-ehx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jdX-ZI-ECg"/>
+                            <constraint firstItem="ZWy-SY-FgP" firstAttribute="top" secondItem="d3I-Ui-N2P" secondAttribute="bottom" constant="20" id="od7-LD-vYI"/>
+                            <constraint firstItem="d3I-Ui-N2P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vi5-J1-4ew"/>
+                            <constraint firstItem="atM-ux-b9X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zjj-cb-lYf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bob-Ih-CBe"/>
+                    <connections>
+                        <outlet property="collectionView" destination="37z-FN-07J" id="UO7-gX-JlL"/>
+                        <segue destination="l1C-Na-dvx" kind="show" identifier="MainToAboutSegue" id="RjO-U6-cmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="sQH-Fl-DAk">
+            <objects>
+                <viewController id="l1C-Na-dvx" customClass="AboutViewController" customModule="VIPER_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7UL-vW-dvB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-8S-5Ki">
+                                <rect key="frame" x="107" y="338" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="0.70211610099337751" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MRN-Z0-ngh"/>
+                                    <constraint firstAttribute="width" constant="200" id="r8e-Rk-wfa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Greetings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showGreetings:" destination="l1C-Na-dvx" eventType="touchUpInside" id="39e-no-X1f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a test timer project on VIPER architecture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlu-gH-xOr">
+                                <rect key="frame" x="57" y="178" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FAD-kS-vzf"/>
+                                    <constraint firstAttribute="height" constant="60" id="jRz-xu-gQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0D9-0n-mTJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lfi-8S-5Ki" firstAttribute="top" secondItem="Mlu-gH-xOr" secondAttribute="bottom" constant="100" id="B0Z-22-LV4"/>
+                            <constraint firstItem="Mlu-gH-xOr" firstAttribute="centerX" secondItem="0D9-0n-mTJ" secondAttribute="centerX" id="TpU-N1-ju8"/>
+                            <constraint firstItem="Mlu-gH-xOr" firstAttribute="top" secondItem="0D9-0n-mTJ" secondAttribute="top" constant="90" id="WKT-Ks-wYv"/>
+                            <constraint firstItem="Lfi-8S-5Ki" firstAttribute="centerX" secondItem="0D9-0n-mTJ" secondAttribute="centerX" id="iz2-76-X5m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="EHf-l2-Wq0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBb-Y4-7ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LO3-EF-hJz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y9f-W0-Mjc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gia-av-QYg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nlF-3J-Fzx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksZ-Pl-KZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
