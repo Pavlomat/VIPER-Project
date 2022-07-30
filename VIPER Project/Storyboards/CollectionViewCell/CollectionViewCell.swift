@@ -7,20 +7,27 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+protocol CollectionViewProtocol: AnyObject {
+}
 
-    static let identifier = "Cell"
+class CollectionViewCell: UICollectionViewCell, CollectionViewProtocol, MyTimerProtocol {
     
-    @IBOutlet weak var timeLabel: UILabel!
+    weak var view: MainViewProtocol!
+    
+    static let identifier = "Cell"
+    @IBOutlet weak var timerCount: UILabel!
+    @IBOutlet weak var timerName: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     static var nib: UINib {
-           return UINib(nibName: String(describing: self), bundle: nil)
+        return UINib(nibName: String(describing: self), bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
-
+    
     @IBAction func deleteButtonClicked(_ sender: Any) {
+        view.deleteCell()
     }
 }

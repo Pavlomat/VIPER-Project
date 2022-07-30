@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-Qj-JgN">
-                        <rect key="frame" x="20" y="0.0" width="276" height="60"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-Qj-JgN" userLabel="Timer Count">
+                        <rect key="frame" x="162" y="0.0" width="148" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -42,11 +42,20 @@
                             <action selector="deleteButtonClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ms7-Mh-Ke8"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyP-Mv-Kh1">
+                        <rect key="frame" x="10" y="0.0" width="144" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="timeLabel" destination="wtF-Qj-JgN" id="WGt-Jh-rq4"/>
+                <outlet property="deleteButton" destination="D0P-Yj-IK2" id="8Dp-Y4-QOS"/>
+                <outlet property="timerCount" destination="wtF-Qj-JgN" id="vMP-4V-82k"/>
+                <outlet property="timerName" destination="yyP-Mv-Kh1" id="n9F-4F-doo"/>
             </connections>
             <point key="canvasLocation" x="21.739130434782609" y="23.4375"/>
         </collectionViewCell>

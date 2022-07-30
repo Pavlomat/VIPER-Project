@@ -42,7 +42,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -59,7 +59,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,11 +92,11 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="adTimerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIU-f4-e17"/>
+                                    <action selector="addTimerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w4U-My-O3c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +121,8 @@
                     <navigationItem key="navigationItem" id="bob-Ih-CBe"/>
                     <connections>
                         <outlet property="collectionView" destination="37z-FN-07J" id="UO7-gX-JlL"/>
+                        <outlet property="timerCount" destination="d3I-Ui-N2P" id="yDC-qP-StA"/>
+                        <outlet property="timerName" destination="A7c-Dh-ehx" id="sB9-aV-ofT"/>
                         <segue destination="l1C-Na-dvx" kind="show" identifier="MainToAboutSegue" id="RjO-U6-cmT"/>
                     </connections>
                 </viewController>

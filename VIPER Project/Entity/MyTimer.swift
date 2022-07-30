@@ -7,9 +7,14 @@
 
 import Foundation
 
-class MyTimer {
+protocol MyTimerProtocol: AnyObject {
     
-    let view: MainViewController
+}
+
+class MyTimer: MyTimerProtocol {
+    
+    weak var view: MainViewProtocol!
+
     var name: String
     var time: Int
     
@@ -17,8 +22,8 @@ class MyTimer {
     var min: Int!
     var sec: Int!
     
-    init(name: String, time: Int, viewController: MainViewController) {
-        self.view = viewController
+    init(name: String, time: Int, view: MainViewProtocol) {
+        self.view = view
         self.name = name
         self.time = time
         min = (time % 3600) / 60
@@ -34,7 +39,7 @@ class MyTimer {
         sec -= 1
         if (time == 0){
             timer.invalidate()
-//            view.deleteCell()
+            view.deleteCell()
         }
         if (sec < 0) {
             sec = 59
@@ -42,6 +47,6 @@ class MyTimer {
                 min -= 1
             }
         }
-//        view.updateView()
+        view.updateView()
     }
 }
