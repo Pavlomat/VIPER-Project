@@ -12,7 +12,7 @@ protocol MainViewProtocol: AnyObject {
     func updateView()
 }
 
-class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDelegate, UICollectionViewDataSource, CollectionViewCellDelegate {
     
     let mainToDetailSegueName = "MainToAboutSegue"
     
@@ -44,8 +44,9 @@ class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath as IndexPath) as! CollectionViewCell
-        cell.deleteButton.tag = indexPath.row
-        cell.deleteButton.addTarget(self, action: #selector(deleteRow), for: .touchUpInside)
+        cell.delegate = self
+//        cell.deleteButton.tag = indexPath.row
+//        cell.deleteButton.addTarget(self, action: #selector(deleteRow), for: .touchUpInside)
         cell.timerName.text = myTimer[indexPath.row].name
         if myTimer[indexPath.row].min! > 9 {
             if myTimer[indexPath.row].sec! > 9 {
@@ -95,11 +96,18 @@ class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDe
         view.endEditing(true)
     }
     
-    @objc func deleteRow(sender: UIButton) {
-        myTimer.remove(at: sender.tag)
-        collectionView.reloadData()
+//    @objc func deleteRow(sender: UIButton) {
+//        myTimer.remove(at: sender.tag)
+//        collectionView.reloadData()
+//    }
+    
+    func deleteTapped(_ cell: CollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            myTimer.remove(at: indexPath.row)
+        }
     }
-    func deleteCell(){  //метод удаляет истекший таймер
+     
+    func deleteCell() {  //метод удаляет истекший таймер
         print("Deleted")
         myTimer.removeLast()
         collectionView.reloadData()

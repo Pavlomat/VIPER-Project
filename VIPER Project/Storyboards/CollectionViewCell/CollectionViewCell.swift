@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol CollectionViewCellDelegate {
+    func deleteTapped(_ cell: CollectionViewCell)
+}
+
 class CollectionViewCell: UICollectionViewCell {
     
     static let identifier = "Cell"
     @IBOutlet weak var timerCount: UILabel!
     @IBOutlet weak var timerName: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
+    
+    var delegate: CollectionViewCellDelegate?
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
@@ -21,4 +27,12 @@ class CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        delegate?.deleteTapped(self)
+    }
+    
+//    func deleteTapped(_ cell: CollectionViewCell) {
+//        delegate?.deleteTapped(self)
+//    }
 }
