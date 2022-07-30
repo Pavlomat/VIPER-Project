@@ -7,12 +7,7 @@
 
 import UIKit
 
-protocol CollectionViewProtocol: AnyObject {
-}
-
-class CollectionViewCell: UICollectionViewCell, CollectionViewProtocol, MyTimerProtocol {
-    
-    weak var view: MainViewProtocol!
+class CollectionViewCell: UICollectionViewCell {
     
     static let identifier = "Cell"
     @IBOutlet weak var timerCount: UILabel!
@@ -25,9 +20,5 @@ class CollectionViewCell: UICollectionViewCell, CollectionViewProtocol, MyTimerP
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    @IBAction func deleteButtonClicked(_ sender: Any) {
-        view.deleteCell()
     }
 }
