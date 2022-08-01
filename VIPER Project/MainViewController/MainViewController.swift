@@ -10,9 +10,12 @@ import UIKit
 protocol MainViewProtocol: AnyObject {
     func deleteCell()
     func updateView()
+    func infoButtonClicked()
+    func addTimer(name: String, time: Int)
+    func deleteTapped(_ cell: CollectionViewCell)
 }
 
-class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDelegate, UICollectionViewDataSource, CollectionViewCellDelegate {
+class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDelegate, UICollectionViewDataSource, CollectionViewCellDelegate, UITextFieldDelegate {
     
     let mainToDetailSegueName = "MainToAboutSegue"
     
@@ -28,64 +31,36 @@ class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(infoButtonClicked))
-        
         configurator.configure(with: self)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(infoButtonClicked))
         
         self.collectionView.register(CollectionViewCell.nib, forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        timerCount.delegate = self
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myTimer.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath as IndexPath) as! CollectionViewCell
-        cell.delegate = self
-//        cell.deleteButton.tag = indexPath.row
-//        cell.deleteButton.addTarget(self, action: #selector(deleteRow), for: .touchUpInside)
-        cell.timerName.text = myTimer[indexPath.row].name
-        if myTimer[indexPath.row].min! > 9 {
-            if myTimer[indexPath.row].sec! > 9 {
-                cell.timerCount.text = "\(myTimer[indexPath.row].min!):\(myTimer[indexPath.row].sec!)"
-            } else {
-                cell.timerCount.text = "\(myTimer[indexPath.row].min!):0\(myTimer[indexPath.row].sec!)"
-            }
-        } else {
-            if myTimer[indexPath.row].sec! > 9 {
-                cell.timerCount.text = "0\(myTimer[indexPath.row].min!):\(myTimer[indexPath.row].sec!)"
-            } else {
-                cell.timerCount.text = "0\(myTimer[indexPath.row].min!):0\(myTimer[indexPath.row].sec!)"
-            }
-        }
-        return cell
+        timerCount.addTarget(self, action: #selector(wholeNumberFilter(_:)), for: .editingChanged)
     }
     
     @objc func infoButtonClicked() {
         presenter.infoButtonClicked()
     }
+    
     @IBAction func addTimerButtonClicked(_ sender: Any) {
-        if !timerName.text!.isEmpty {
-            if !timerCount.text!.isEmpty {
-                if !timerCount.text!.contains(",") {
-                    addTimer(name: timerName.text!, time: Int(timerCount.text!)!)
+        if !timerName.text!.isEmpty && !timerCount.text!.isEmpty {
+            presenter.addTimerButtonClicked(name: timerName.text!, time: Int(timerCount.text!)!)
                     return
-                }
-            }
         }
         let ac = UIAlertController(title: "Ошибка", message: "Неправильно задан таймер", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(ac, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        presenter.router.prepare(for: segue, sender: sender)
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        presenter.router.prepare(for: segue, sender: sender)
+//    }
     
-    //старт таймера с данными из текстовых полей и сортировка таймеров  порядке убывания
     func addTimer(name: String, time: Int) {
         myTimer.insert(MyTimer(name: name, time: time, view: self), at: 0)
         myTimer.first?.setTimer()
@@ -96,24 +71,18 @@ class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDe
         view.endEditing(true)
     }
     
-//    @objc func deleteRow(sender: UIButton) {
-//        myTimer.remove(at: sender.tag)
-//        collectionView.reloadData()
-//    }
-    
     func deleteTapped(_ cell: CollectionViewCell) {
         if let indexPath = collectionView.indexPath(for: cell) {
             myTimer.remove(at: indexPath.row)
         }
     }
      
-    func deleteCell() {  //метод удаляет истекший таймер
-        print("Deleted")
+    func deleteCell() {
         myTimer.removeLast()
         collectionView.reloadData()
     }
     
-    func updateView() { //метод обновляет каждую секунду таймеры и тейбл вью
+    func updateView() {
         myTimer.sort { $0.time > $1.time }
         collectionView.reloadData()
     }

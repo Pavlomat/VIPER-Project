@@ -25,6 +25,7 @@
 		BAA0373328941F5C0084A1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373128941F5C0084A1C0 /* Main.storyboard */; };
 		BAA0373528941F5D0084A1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373428941F5D0084A1C0 /* Assets.xcassets */; };
 		BAA0373828941F5D0084A1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA0373628941F5D0084A1C0 /* LaunchScreen.storyboard */; };
+		BAA03F622895243E005633D0 /* MainViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA03F612895243E005633D0 /* MainViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		BAA0373428941F5D0084A1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAA0373728941F5D0084A1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAA0373928941F5D0084A1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA03F612895243E005633D0 /* MainViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				BA7AD902289420AE00ED8A2F /* MainInteractor.swift */,
 				BA7AD904289420B800ED8A2F /* MainConfigurator.swift */,
 				BA7AD906289420BF00ED8A2F /* MainRouter.swift */,
+				BAA03F612895243E005633D0 /* MainViewExtension.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				BA7AD905289420B800ED8A2F /* MainConfigurator.swift in Sources */,
 				BA7AD8FF2894209300ED8A2F /* MainViewController.swift in Sources */,
 				BA7AD90B289420E300ED8A2F /* AboutPresenter.swift in Sources */,
+				BAA03F622895243E005633D0 /* MainViewExtension.swift in Sources */,
 				BA7AD903289420AE00ED8A2F /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

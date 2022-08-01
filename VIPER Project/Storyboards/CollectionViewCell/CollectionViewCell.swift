@@ -7,11 +7,14 @@
 
 import UIKit
 
+protocol CollectionViewCellProtocol {
+}
+
 protocol CollectionViewCellDelegate {
     func deleteTapped(_ cell: CollectionViewCell)
 }
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell, CollectionViewCellProtocol {
     
     static let identifier = "Cell"
     @IBOutlet weak var timerCount: UILabel!
