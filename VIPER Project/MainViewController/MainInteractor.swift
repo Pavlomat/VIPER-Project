@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol MainInteractorProtocol: AnyObject {    //логика хранения и извлечения данных
+protocol MainInteractorProtocol: AnyObject {
 }
 
 class MainInteractor: MainInteractorProtocol {
     
-    weak var presenter: MainPresenterProtocol!  //Обязательно WEAK чтобы избежать утечек памяти
+    weak var presenter: MainPresenterProtocol!
     
     required init(presenter: MainPresenterProtocol) {
         self.presenter = presenter
