@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MainPresenterProtocol: AnyObject {//отвечает за действия при нажатии на кнопки в VC
+protocol MainPresenterProtocol: AnyObject {
     var router: MainRouterProtocol! { set get }
     
     func infoButtonClicked()
