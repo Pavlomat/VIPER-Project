@@ -34,8 +34,4 @@ class CollectionViewCell: UICollectionViewCell, CollectionViewCellProtocol {
     @IBAction func deleteTapped(_ sender: Any) {
         delegate?.deleteTapped(self)
     }
-    
-//    func deleteTapped(_ cell: CollectionViewCell) {
-//        delegate?.deleteTapped(self)
-//    }
 }
