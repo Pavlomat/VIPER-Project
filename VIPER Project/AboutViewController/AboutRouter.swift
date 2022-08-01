@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-protocol AboutRouterProtocol: AnyObject {   //Presenter решает что при нажатии на кнопку закрыть нужно перейти между экранами поэтому обработка переходов передается в Router
-    func closeCurrentViewController()   //Умеет только закрывать текущий VC
+protocol AboutRouterProtocol: AnyObject {   
+    func closeCurrentViewController() 
 }
 
 class AboutRouter: AboutRouterProtocol {
