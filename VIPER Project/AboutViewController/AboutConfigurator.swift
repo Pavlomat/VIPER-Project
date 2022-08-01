@@ -12,7 +12,7 @@ protocol AboutConfiguratorProtocol: AnyObject {
 }
 
 class AboutConfigurator: AboutConfiguratorProtocol {
-    func configure(with viewController: AboutViewController) {  //здесь будет конфигурироваться модуль
+    func configure(with viewController: AboutViewController) {
         let presenter = AboutPresenter(view: viewController)
                let interactor = AboutInteractor(presenter: presenter)
                let router = AboutRouter(viewController: viewController)
