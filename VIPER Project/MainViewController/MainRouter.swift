@@ -10,7 +10,6 @@ import UIKit
 
 protocol MainRouterProtocol: AnyObject {
     func showAboutScene()
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?)
 }
 
 class MainRouter: MainRouterProtocol {
@@ -24,8 +23,4 @@ class MainRouter: MainRouterProtocol {
     func showAboutScene() {
         viewController.performSegue(withIdentifier: viewController.mainToDetailSegueName, sender: nil)
     }
-    
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // prepare here some data for destination viewController
-//    }
 }
