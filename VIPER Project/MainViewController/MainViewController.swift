@@ -57,10 +57,6 @@ class MainViewController: UIViewController, MainViewProtocol, UICollectionViewDe
         present(ac, animated: true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        presenter.router.prepare(for: segue, sender: sender)
-//    }
-    
     func addTimer(name: String, time: Int) {
         myTimer.insert(MyTimer(name: name, time: time, view: self), at: 0)
         myTimer.first?.setTimer()
