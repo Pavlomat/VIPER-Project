@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AboutPresenterProtocol: AnyObject {    //отвечает за действия при нажатии на кнопки в VC
+protocol AboutPresenterProtocol: AnyObject {
     var router: AboutRouterProtocol! { set get }
     func closeButtonClicked()
     func showGreetingsAlertClicked()
@@ -15,7 +15,7 @@ protocol AboutPresenterProtocol: AnyObject {    //отвечает за дейс
 
 class AboutPresenter: AboutPresenterProtocol {
         
-    weak var view: AboutViewProtocol!   //обязательно WEAK чтобы не было ссылания друг на друга
+    weak var view: AboutViewProtocol!  
     var interactor: AboutInteractorProtocol!
     var router: AboutRouterProtocol!
     
